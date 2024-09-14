@@ -15,7 +15,7 @@ public class rollingSoundMapping : MonoBehaviour
         rollingAudio = transform.GetComponent<AudioSource>();
 
 
-        rollingAudio.volume = 0f;
+        rollingAudio.volume = -10f;
 
         rollingBallPlayerBody = rollingBallPlayer.GetComponent<Rigidbody>();
     }

@@ -8,12 +8,14 @@ public class Bumperscore : MonoBehaviour
     public GameObject scoreObject;
     ScoreKeeper scoreKeeper;
     public int currentScore = 0;
-
+    private AudioSource thisAudioSource;
+    public float ImpactVolume = .5f;
+    public AudioClip Impact;
     void Start()
     {
 
         currentScore = 0;
-
+        thisAudioSource = transform.GetComponent<AudioSource>();
         body = GetComponent<Rigidbody>();
         if (scoreObject != null)
         {
@@ -21,11 +23,14 @@ public class Bumperscore : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
+ 
+   private void OnCollisionEnter(Collision other)
     {
-        if (collision.collider.name == "Pinball")
-        {
+        if (other.gameObject.CompareTag("Bumper"))
+            {
             currentScore += 1;
+            thisAudioSource.volume = ImpactVolume;
+            thisAudioSource.PlayOneShot(Impact);
             if (scoreObject != null)
             {
                 scoreKeeper.IncrementScore();

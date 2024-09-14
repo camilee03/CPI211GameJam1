@@ -7,7 +7,7 @@ public class Slots : MonoBehaviour
     [SerializeField] int score;
     private void OnTriggerEnter(Collider other)
     {
-        if (other.name == "Pinball")
+        if (other.gameObject.CompareTag("Pinball"))
         {
             other.gameObject.SetActive(false);
             // Add score

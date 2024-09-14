@@ -18,7 +18,7 @@ public class ColorChangeScript : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.CompareTag("Player"))
+        if(other.gameObject.CompareTag("Pinball"))
         {
             other.GetComponent<Renderer>().material.SetColor("_Color", Color.red);
             ColorChangeObj.SetActive(false);

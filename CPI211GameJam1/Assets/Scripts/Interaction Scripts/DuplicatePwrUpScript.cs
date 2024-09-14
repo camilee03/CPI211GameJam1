@@ -19,7 +19,7 @@ public class DuplicatePwrUpScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.CompareTag("Player"))
+        if(other.gameObject.CompareTag("Pinball"))
         {
             for(int i = 0; i < 1; i++)
             {

@@ -43,20 +43,20 @@ public class playerControllerSoundTriggers : MonoBehaviour
 
     //private void OnTriggerEnter(Collider other)
     //{
-       // if(other.gameObject.CompareTag("PickUp"))
-       // {
-        //    other.gameObject.SetActive(false);
-        //    count += 1;
+    // if(other.gameObject.CompareTag("PickUp"))
+    // {
+    //    other.gameObject.SetActive(false);
+    //    count += 1;
 
 
-         //   thisAudioSource.volume = pickUpVolume;
-            //SFXManager.sndMan.PlayPickupSound();
-            //thisAudioSource.PlayOneShot(pickUp);
-       
+    //   thisAudioSource.volume = pickUpVolume;
+    //SFXManager.sndMan.PlayPickupSound();
+    //thisAudioSource.PlayOneShot(pickUp);
 
-   // SetCountText();
-   //     }
-  //  }
+
+    // SetCountText();
+    //     }
+    //  }
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -66,8 +66,6 @@ public class playerControllerSoundTriggers : MonoBehaviour
             thisAudioSource.volume = ImpactVolume;
             thisAudioSource.PlayOneShot(Impact);
         }
-        
-    }
 
         if (countText != null)
         {

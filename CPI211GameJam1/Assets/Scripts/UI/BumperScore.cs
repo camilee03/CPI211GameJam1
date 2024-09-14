@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Bumperscore : MonoBehaviour
 {
@@ -34,7 +35,13 @@ public class Bumperscore : MonoBehaviour
             if (scoreObject != null)
             {
                 scoreKeeper.IncrementScore();
-            }
+            }   
+        }
+        if (currentScore == 5)
+        {
+            SceneManager.LoadScene(0); // NOTE: This doesn't do much yet, I need to find a way to get it to actually load scenes, but this is a good
+            // proof of concept for now.
         }
     }
+
 }

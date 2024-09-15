@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FlipperActivater : MonoBehaviour
 {
-    Vector3 deltaRotation = new Vector3(0, 1000f, 0);
+    [SerializeField] Vector3 deltaRotation = new Vector3(0, 1000000f, 0);
 
     [SerializeField] GameObject leftFlipper;
     [SerializeField] GameObject rightFlipper;

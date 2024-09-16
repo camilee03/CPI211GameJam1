@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 3773152262567765746}
   - component: {fileID: 58869795532974697}
   - component: {fileID: 1799695964692299873}
-  - component: {fileID: 346896465640242593}
   m_Layer: 0
   m_Name: Bumper1
   m_TagString: Bumper
@@ -219,19 +218,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bumperSlot: {fileID: 0}
---- !u!114 &346896465640242593
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7535033828102480277}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cedbaa6c02db76041ae32680a4422163, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scoreObject: {fileID: 0}
-  currentScore: 0
-  ImpactVolume: 0.5
-  Impact: {fileID: 8300000, guid: 3bd1759673dde174192ed1998290753a, type: 3}

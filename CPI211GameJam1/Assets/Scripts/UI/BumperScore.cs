@@ -26,10 +26,15 @@ public class Bumperscore : MonoBehaviour
 
     }
 
+    public int getScore()
+    {
+        return currentScore;
+    }
 
-
-
-
+    public int setScore(int pScore) 
+    { 
+        return currentScore = pScore; 
+    }
 
 private void OnCollisionEnter(Collision other)
     {

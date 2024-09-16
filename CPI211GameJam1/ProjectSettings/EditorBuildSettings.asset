@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Lvl1Luna.unity
+    guid: 9677b5431fef9714480aa7c75fcefa08
+  - enabled: 1
+    path: Assets/Scenes/Lvl2Luna.unity
+    guid: d53bef023e6d9bc4d90d4f12bf060f6f
   m_configObjects: {}

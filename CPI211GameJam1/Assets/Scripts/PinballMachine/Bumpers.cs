@@ -7,7 +7,7 @@ public class Bumpers : MonoBehaviour
     [SerializeField] GameObject bumperSlot;
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.collider.name == "Pinball" && bumperSlot.activeInHierarchy)
+        if (collision.gameObject.CompareTag("Pinball") && bumperSlot.activeInHierarchy)
         {
             bumperSlot.SetActive(false);
         }

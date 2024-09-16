@@ -9,7 +9,6 @@ public class Slots : MonoBehaviour
     [SerializeField] int score;
     [SerializeField] bool debugLog;
     public Bumperscore bumpScoreObj;
-    private int numSceneSwaps = 0;
     private void Update()
     {
         Debug.unityLogger.logEnabled = debugLog;
@@ -22,16 +21,18 @@ public class Slots : MonoBehaviour
         {
             other.gameObject.SetActive(false);
             score = bumpScoreObj.getScore();
-            if (score >= 5)
+            if (score >= 1)
             {
                 Debug.Log("HIT!");
-                if (numSceneSwaps == 0)
+                if(SceneManager.GetActiveScene().name.Equals("Lvl1Luna"))
                 {
+                    Debug.Log("Level 1 to Level 2");
                     SceneManager.LoadScene("Lvl2Luna");
                     bumpScoreObj.setScore(0);
                 }
-                else if (numSceneSwaps == 1)
+                else if(SceneManager.GetActiveScene().name.Equals("Lvl2Luna"))
                 {
+                    Debug.Log("Level 2 to Level 3");
                     SceneManager.LoadScene("Lvl3Luna");
                     bumpScoreObj.setScore(0);
                 }
@@ -39,7 +40,6 @@ public class Slots : MonoBehaviour
                 {
                     Debug.Log("YOU WIN!");
                 }
-                numSceneSwaps++;
             }
             Debug.Log("Score!");
         }

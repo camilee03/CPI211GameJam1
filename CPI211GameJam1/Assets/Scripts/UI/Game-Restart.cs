@@ -10,26 +10,27 @@ public class Restart : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        tryAgain = GameObject.FindGameObjectWithTag("TryAgain");
+        //tryAgain = GameObject.FindGameObjectWithTag("TryAgain");
         loseBarrier = GameObject.FindGameObjectWithTag("losebarrier");
-        tryAgain.SetActive(false);
+        //tryAgain.SetActive(false);
 
     }
     private void OnTriggerEnter(Collider trigger)
     {
-        if (trigger.gameObject.CompareTag("losebarrier"))
+        if (trigger.gameObject.CompareTag("Pinball"))
         {
             print("Bumper Test!!");
-            tryAgain.SetActive(true);
+            //tryAgain.SetActive(true);
 
-            Invoke("resetGame", 2f);
-           
+            //Invoke("resetGame", 2f);
+            resetGame();
         }
        
     }
     void resetGame()
     {
-        Scene scene = SceneManager.GetActiveScene(); SceneManager.LoadScene(scene.name);
+        Scene scene = SceneManager.GetActiveScene(); 
+        SceneManager.LoadScene(scene.name);
     }
     // Update is called once per frame
     void Update()

@@ -10,7 +10,7 @@ public class Flipper_Audio : MonoBehaviour
     [SerializeField] GameObject leftFlipper;
     [SerializeField] GameObject rightFlipper;
     private AudioSource thisAudioSource;
-    public AudioClip Impact;
+    public AudioClip Flipper;
     public float ImpactVolume = .5f;
 
 
@@ -18,15 +18,16 @@ public class Flipper_Audio : MonoBehaviour
     {
         thisAudioSource = transform.GetComponent<AudioSource>();
     }
+    //play flipper sound on button push
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.RightArrow)) {
             thisAudioSource.volume = ImpactVolume;
-            thisAudioSource.PlayOneShot(Impact);
+            thisAudioSource.PlayOneShot(Flipper);
         }
         if (Input.GetKeyDown(KeyCode.LeftArrow)) {
             thisAudioSource.volume = ImpactVolume;
-            thisAudioSource.PlayOneShot(Impact);
+            thisAudioSource.PlayOneShot(Flipper);
         }
     }
 

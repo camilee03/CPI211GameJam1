@@ -7,6 +7,7 @@ public class Khoi_Slots : MonoBehaviour
     [SerializeField] int score;
     [SerializeField] bool debugLog;
 
+
     private void Update()
     {
         Debug.unityLogger.logEnabled = debugLog;

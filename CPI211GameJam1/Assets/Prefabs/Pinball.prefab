@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 2024130170501699093}
   - component: {fileID: 6735677117192134376}
   - component: {fileID: 502599185397051071}
-  - component: {fileID: 5143997497608745442}
   - component: {fileID: 2761465957456135920}
   m_Layer: 0
   m_Name: Pinball
@@ -246,21 +245,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreObject: {fileID: 0}
-  currentScore: 0
   ImpactVolume: 0.5
   Impact: {fileID: 8300000, guid: 37cdce56034c9bb46b04a54f0ab40913, type: 3}
---- !u!114 &5143997497608745442
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7240513696426546330}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f973b9289d7701479a5b4ec3e9d97a9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2761465957456135920
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -273,3 +259,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36c4be935966c4043a42cd10308db045, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Pinball: {fileID: 0}
+  current_slotscore: 0

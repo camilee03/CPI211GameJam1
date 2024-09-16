@@ -4,29 +4,41 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Restart : MonoBehaviour
-{
+{   
+    //Try Again Text UI
     GameObject tryAgain;
+    //lose barrier cube
     GameObject loseBarrier;
+    Slots_V2 total_score;
     // Start is called before the first frame update
     void Start()
     {
-        //tryAgain = GameObject.FindGameObjectWithTag("TryAgain");
+        //Shows try again object UI
+        tryAgain = GameObject.FindGameObjectWithTag("TryAgain");
         loseBarrier = GameObject.FindGameObjectWithTag("losebarrier");
-        //tryAgain.SetActive(false);
+        tryAgain.SetActive(false);
 
     }
     private void OnTriggerEnter(Collider trigger)
     {
-        if (trigger.gameObject.CompareTag("Pinball"))
+        if (trigger.gameObject.CompareTag("Pinball") ) 
         {
+         if (Slots_V2.newscore < 26){ 
             print("Bumper Test!!");
-            //tryAgain.SetActive(true);
-
-            //Invoke("resetGame", 2f);
-            resetGame();
+            tryAgain.SetActive(true);
+                //disappear in two frames
+            Invoke("resetGame", 2f);
+            }
         }
-       
-    }
+        //resetGame();
+        else if (Slots_V2.newscore >26)
+        {
+            tryAgain.SetActive(false);
+        }
+       }
+      
+    
+
     void resetGame()
     {
         Scene scene = SceneManager.GetActiveScene(); 
@@ -35,7 +47,28 @@ public class Restart : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (GameObject.FindWithTag("Pinball") != null)  {
+            if (Slots_V2.newscore < 26) // check if the total score is is less than 26, if less than 26 then restart
+            {
+              loseBarrier.SetActive(true);
+                
+            }
+        }
+        else if (GameObject.FindWithTag("Pinball") != null) 
+        {
+            if (Slots_V2.newscore > 26) // placeholder if statement, check if the total score is more than 26, if more than 26 then set TryAgain text to false
+            {
+                tryAgain.SetActive(false);
+            }
+        }
+            else {
+             if (Slots_V2.newscore < 26) // check if the total score is is less than 26, if less than 26 then restart { 
+                Invoke("resetGame", 2f);
+                tryAgain.SetActive(true);
+            }
+        }
+             
+        
     }
-}
+
 

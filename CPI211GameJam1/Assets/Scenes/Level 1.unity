@@ -590,9 +590,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4bcd7797d61ffd4dba8c2104a4a0196, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deltaRotation: {x: 0, y: 1000000, z: 0}
   leftFlipper: {fileID: 30974470}
   rightFlipper: {fileID: 1999482062}
+  debugLog: 1
 --- !u!1 &141600570
 GameObject:
   m_ObjectHideFlags: 0
@@ -775,6 +775,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 25
   debugLog: 0
+  bumpScoreObj: {fileID: 0}
 --- !u!64 &150653520
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1307,6 +1308,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 25
   debugLog: 0
+  bumpScoreObj: {fileID: 0}
 --- !u!64 &421379296
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1743,6 +1745,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 75
   debugLog: 0
+  bumpScoreObj: {fileID: 0}
 --- !u!64 &807364345
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2559,6 +2562,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 50
   debugLog: 0
+  bumpScoreObj: {fileID: 0}
 --- !u!64 &1082717942
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3430,6 +3434,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 50
   debugLog: 0
+  bumpScoreObj: {fileID: 0}
 --- !u!64 &1563311530
 MeshCollider:
   m_ObjectHideFlags: 0

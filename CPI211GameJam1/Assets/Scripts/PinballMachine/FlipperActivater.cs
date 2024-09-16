@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class FlipperActivater : MonoBehaviour
 {
+    
     [SerializeField] Vector3 deltaRotation = new Vector3(0, 1000000f, 0);
 
     [SerializeField] GameObject leftFlipper;
     [SerializeField] GameObject rightFlipper;
+
+  
 
     private void Update()
     {
@@ -22,5 +25,6 @@ public class FlipperActivater : MonoBehaviour
     public void ActivateLeftFlipper() 
     {
         leftFlipper.GetComponent<Rigidbody>().AddTorque(-deltaRotation);
+    
     }
 }

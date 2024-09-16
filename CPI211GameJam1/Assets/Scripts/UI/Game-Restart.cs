@@ -19,7 +19,7 @@ public class Restart : MonoBehaviour
     {
         if (trigger.gameObject.CompareTag("losebarrier"))
         {
-
+            print("Bumper Test!!");
             tryAgain.SetActive(true);
 
             Invoke("resetGame", 2f);

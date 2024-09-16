@@ -9,7 +9,7 @@ public class Bumperscore : MonoBehaviour
     Rigidbody body;
     public GameObject scoreObject;
     ScoreKeeper scoreKeeper;
-    public int currentScore = 0;
+    static public int currentScore = 0;
     private AudioSource thisAudioSource;
     public float ImpactVolume = .5f;
     public AudioClip Impact;
@@ -21,8 +21,9 @@ public class Bumperscore : MonoBehaviour
        currentScore = 0;
         thisAudioSource = transform.GetComponent<AudioSource>();
         body = GetComponent<Rigidbody>();
-     
-       
+        
+
+
 
     }
 
@@ -40,18 +41,20 @@ private void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.CompareTag("Bumper"))
             {
+            print("Bumper Test!!");
             currentScore += 1;
             thisAudioSource.volume = ImpactVolume;
             thisAudioSource.PlayOneShot(Impact);
+           
             // if (scoreObject != null)
 
-              // {
-               // scoreKeeper.IncrementScore();
+            // {
+            // scoreKeeper.IncrementScore();
             //}
-        
 
 
-           
+
+
 
 
         }

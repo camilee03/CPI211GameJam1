@@ -8,6 +8,8 @@ public class score_display : MonoBehaviour
 
     public GameObject Pinball;
     Bumperscore bumpers_score;
+   
+
     TextMeshProUGUI textMeshProUGUI;
 
 
@@ -17,7 +19,11 @@ public class score_display : MonoBehaviour
         if (Pinball != null)
         {
             bumpers_score = Pinball.GetComponent<Bumperscore>();
+            //total_score = Pinball.GetComponent<SlotScore>();
+
+
         }
+
 
 
         textMeshProUGUI = GetComponent<TextMeshProUGUI>();
@@ -27,6 +33,7 @@ public class score_display : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        textMeshProUGUI.text = bumpers_score.currentScore.ToString();
+        textMeshProUGUI.text = Bumperscore.currentScore.ToString();
+        //textMeshProUGUI.text = total_score.score.ToString();
     }
 }

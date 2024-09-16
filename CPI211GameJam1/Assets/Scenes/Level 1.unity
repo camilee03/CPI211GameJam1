@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 25622002}
   m_Layer: 0
   m_Name: Bumper_50
-  m_TagString: Untagged
+  m_TagString: Bumper
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -861,7 +861,7 @@ GameObject:
   - component: {fileID: 246111748}
   m_Layer: 0
   m_Name: Bumper_0 (1)
-  m_TagString: Untagged
+  m_TagString: Bumper
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1003,7 +1003,7 @@ GameObject:
   - component: {fileID: 372889856}
   m_Layer: 0
   m_Name: Bumper_75
-  m_TagString: Untagged
+  m_TagString: Bumper
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2216,7 +2216,7 @@ GameObject:
   - component: {fileID: 866255619}
   m_Layer: 0
   m_Name: Bumper_0
-  m_TagString: Untagged
+  m_TagString: Bumper
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

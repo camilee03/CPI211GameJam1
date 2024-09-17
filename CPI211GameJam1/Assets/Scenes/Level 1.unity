@@ -910,7 +910,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 628894c25769cee4e832e8da2fd51ac5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animationClip: {fileID: 7400000, guid: a1c046d7c6a48aa459d93d5fac1acca1, type: 2}
   deltaRotation: {x: 0, y: 1000000, z: 0}
   leftFlipper: {fileID: 30974470}
   rightFlipper: {fileID: 1999482062}

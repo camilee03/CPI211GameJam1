@@ -23,21 +23,22 @@ public class Restart : MonoBehaviour
     }
     private void OnTriggerEnter(Collider trigger)
     {
-        if (trigger.gameObject.CompareTag("Pinball") ) 
+        if (trigger.gameObject.CompareTag("Pinball"))
         {
-            if (Slots_V2.newscore < 25){ 
+            if (Slots_V2.newscore < 25)
+            {
                 print("Bumper Test!!");
                 tryAgain.SetActive(true);
                 //disappear in two frames
                 Invoke("resetGame", 2f);
             }
-        }
             //resetGame();
             else if (Slots_V2.newscore >= 25)
             {
                 tryAgain.SetActive(false);
                 //Victory.SetActive(true);
             }
+        }
        }
       
     

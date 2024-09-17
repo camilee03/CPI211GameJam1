@@ -27,7 +27,7 @@ public class Slots_V2 : MonoBehaviour
         Debug.unityLogger.logEnabled = debugLog;
     }
 
-    private async void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
 
         if (other.gameObject.CompareTag("Pinball"))
@@ -48,28 +48,27 @@ public class Slots_V2 : MonoBehaviour
                     {
                         Debug.Log("Level 1 to Level 2");
                         vicObj.SetActive(true);
-                        Thread.Sleep(2000);
-                        SceneManager.LoadScene("Level 2");
+                        SceneManager.LoadScene(1);
                         bumpScoreObj.setScore(0);
                     }
                     else
                     {
+                        Debug.Log("Redo");
                         other.gameObject.SetActive(false);
                     }
-
                 }
-                else if (SceneManager.GetActiveScene().name.Equals("Level 2"))
+                if (SceneManager.GetActiveScene().name.Equals("Level 2"))
                 {
-                    if (score >= 50)
+                    if (score >= 10)
                     {
                         Debug.Log("Level 2 to Level 3");
                         vicObj.SetActive(true);
-                        //Thread.Sleep(2000);
-                        SceneManager.LoadScene("Level 3");
+                        SceneManager.LoadScene(2);
                         bumpScoreObj.setScore(0);
                     }
                     else
                     {
+                        Debug.Log("Redo");
                         other.gameObject.SetActive(false);
                     }
                 }

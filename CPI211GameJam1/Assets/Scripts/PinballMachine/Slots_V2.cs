@@ -25,6 +25,7 @@ public class Slots_V2 : MonoBehaviour
     private void Update()
     {
         Debug.unityLogger.logEnabled = debugLog;
+        StartCoroutine(Timer() );
     }
 
     private void OnTriggerEnter(Collider other)
@@ -95,5 +96,11 @@ public class Slots_V2 : MonoBehaviour
             bumpScoreObj.setScore(newscore);
             Debug.Log("Score!");
         }*/
+    }
+
+    IEnumerator Timer()
+    {
+        yield return new WaitForSeconds(30);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

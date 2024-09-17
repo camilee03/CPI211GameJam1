@@ -6,9 +6,9 @@ using TMPro;
 public class totalscore_display : MonoBehaviour
 {
 
-    public GameObject BumperSlot25;
-    public GameObject BumperSlot50;
-    public GameObject BumperSlot75;
+    public GameObject BumperSlot_25;
+    public GameObject BumperSlot_50;
+    public GameObject BumperSlot_75;
 
     //Bumperscore bumpers_score;
     Slots_V2 total_score;
@@ -19,24 +19,24 @@ public class totalscore_display : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (BumperSlot25 != null)
+        if (BumperSlot_25 != null)
         {
             //bumpers_score = Pinball.GetComponent<Bumperscore>();
-            total_score = BumperSlot25.GetComponent<Slots_V2>();
+            total_score = BumperSlot_25.GetComponent<Slots_V2>();
 
 
         }
-        if (BumperSlot50 != null)
+        if (BumperSlot_50 != null)
         {
             //bumpers_score = Pinball.GetComponent<Bumperscore>();
-            total_score = BumperSlot50.GetComponent<Slots_V2>();
+            total_score = BumperSlot_50.GetComponent<Slots_V2>();
 
 
         }
-        if (BumperSlot75 != null)
+        if (BumperSlot_75 != null)
         {
             //bumpers_score = Pinball.GetComponent<Bumperscore>();
-            total_score = BumperSlot50.GetComponent<Slots_V2>();
+            total_score = BumperSlot_75.GetComponent<Slots_V2>();
 
 
         }

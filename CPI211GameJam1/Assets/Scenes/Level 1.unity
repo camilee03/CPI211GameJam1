@@ -1325,7 +1325,7 @@ MonoBehaviour:
   debugLog: 0
   Impact: {fileID: 8300000, guid: 196850aef4b07f84ebe648a46d9c7421, type: 3}
   ImpactVolume: 0.5
-  bumpScoreObj: {fileID: 0}
+  bumpScoreObj: {fileID: 1201876515}
 --- !u!1 &327813085
 GameObject:
   m_ObjectHideFlags: 0
@@ -3476,9 +3476,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4b0462e64476ee4aaf9188eebf23004, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BumperSlot25: {fileID: 1611213282}
-  BumperSlot50: {fileID: 1298891696}
-  BumperSlot75: {fileID: 304896359}
+  BumperSlot_25: {fileID: 0}
+  BumperSlot_50: {fileID: 0}
+  BumperSlot_75: {fileID: 0}
 --- !u!1 &1082717939
 GameObject:
   m_ObjectHideFlags: 0
@@ -3834,7 +3834,7 @@ MonoBehaviour:
   debugLog: 0
   Impact: {fileID: 8300000, guid: 196850aef4b07f84ebe648a46d9c7421, type: 3}
   ImpactVolume: 0.5
-  bumpScoreObj: {fileID: 0}
+  bumpScoreObj: {fileID: 1201876515}
 --- !u!82 &1298891700
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5054,7 +5054,7 @@ MonoBehaviour:
   debugLog: 0
   Impact: {fileID: 8300000, guid: 196850aef4b07f84ebe648a46d9c7421, type: 3}
   ImpactVolume: 0.5
-  bumpScoreObj: {fileID: 0}
+  bumpScoreObj: {fileID: 1201876515}
 --- !u!1 &1633897343
 GameObject:
   m_ObjectHideFlags: 0

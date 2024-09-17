@@ -6,7 +6,7 @@ public class FlipperActivater_Animation : MonoBehaviour
 {
     Animator animator_left;
     Animator animator_right;
-    public AnimationClip animationClip ;
+    private AnimationClip animationClip ;
     [SerializeField] Vector3 deltaRotation = new Vector3(0, 1000000f, 0);
 
     [SerializeField] GameObject leftFlipper;

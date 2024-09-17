@@ -31,7 +31,7 @@ public class Restart : MonoBehaviour
             }
         }
         //resetGame();
-        else if (Slots.newscore >26)
+        else if (Slots_V2.newscore >26)
         {
             tryAgain.SetActive(false);
         }
@@ -48,7 +48,7 @@ public class Restart : MonoBehaviour
     void Update()
     {
         if (GameObject.FindWithTag("Pinball") != null)  {
-            if (Slots.newscore < 26) // check if the total score is is less than 26, if less than 26 then restart
+            if (Slots_V2.newscore < 26) // check if the total score is is less than 26, if less than 26 then restart
             {
               loseBarrier.SetActive(true);
                 
@@ -56,13 +56,13 @@ public class Restart : MonoBehaviour
         }
         else if (GameObject.FindWithTag("Pinball") != null) 
         {
-            if (Slots.newscore > 26) // placeholder if statement, check if the total score is more than 26, if more than 26 then set TryAgain text to false
+            if (Slots_V2.newscore > 26) // placeholder if statement, check if the total score is more than 26, if more than 26 then set TryAgain text to false
             {
                 tryAgain.SetActive(false);
             }
         }
             else {
-             if (Slots.newscore < 26) // check if the total score is is less than 26, if less than 26 then restart { 
+             if (Slots_V2.newscore < 26) // check if the total score is is less than 26, if less than 26 then restart { 
                 Invoke("resetGame", 2f);
                 tryAgain.SetActive(true);
             }

@@ -464,7 +464,7 @@ Transform:
   m_GameObject: {fileID: 93896404}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.5, y: 0.5, z: -12.1}
+  m_LocalPosition: {x: -8.5, y: 0.5, z: -12.100001}
   m_LocalScale: {x: 1.5, y: 1, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -948,13 +948,13 @@ Transform:
   m_GameObject: {fileID: 304896359}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 3.2, y: -1.8000001, z: -16.1}
+  m_LocalScale: {x: 1, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1965098271}
   - {fileID: 2120237400}
-  m_Father: {fileID: 1611213283}
+  m_Father: {fileID: 372889855}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &304896361
 MonoBehaviour:
@@ -1133,6 +1133,7 @@ Transform:
   m_LocalScale: {x: 1, y: 0.33333334, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 304896360}
   - {fileID: 1558656446}
   m_Father: {fileID: 1171319010}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3265,6 +3266,7 @@ Transform:
   - {fileID: 25622001}
   - {fileID: 866255618}
   - {fileID: 246111747}
+  - {fileID: 1298891697}
   - {fileID: 372889855}
   - {fileID: 1611213283}
   m_Father: {fileID: 0}
@@ -3335,7 +3337,7 @@ Transform:
   m_Children:
   - {fileID: 93896405}
   - {fileID: 838669858}
-  m_Father: {fileID: 1611213283}
+  m_Father: {fileID: 1171319010}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1298891698
 MonoBehaviour:
@@ -4284,8 +4286,6 @@ Transform:
   - {fileID: 1563311528}
   - {fileID: 1082717940}
   - {fileID: 807364343}
-  - {fileID: 1298891697}
-  - {fileID: 304896360}
   m_Father: {fileID: 1171319010}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1611213284
@@ -4302,7 +4302,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 25
   debugLog: 0
-  Impact: {fileID: 0}
+  Impact: {fileID: 8300000, guid: 196850aef4b07f84ebe648a46d9c7421, type: 3}
   ImpactVolume: 0.5
 --- !u!1 &1633897343
 GameObject:
@@ -5029,7 +5029,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftFlipper: {fileID: 30974470}
   rightFlipper: {fileID: 1999482062}
-  Impact: {fileID: 8300000, guid: 21ca12e95c7d4cf43a1071bd8ad5d08f, type: 3}
+  Flipper: {fileID: 0}
   ImpactVolume: 0.5
 --- !u!1 &1965098270
 GameObject:
@@ -5591,7 +5591,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftFlipper: {fileID: 30974470}
   rightFlipper: {fileID: 1999482062}
-  Impact: {fileID: 8300000, guid: 21ca12e95c7d4cf43a1071bd8ad5d08f, type: 3}
+  Flipper: {fileID: 0}
   ImpactVolume: 0.5
 --- !u!1 &2120237399
 GameObject:
@@ -5785,40 +5785,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2024130170501699093, guid: c5b708f725c6deb4a8f5ecb821b941a4, type: 3}
-      propertyPath: m_Mass
-      value: 0.001
-      objectReference: {fileID: 0}
-    - target: {fileID: 2024130170501699093, guid: c5b708f725c6deb4a8f5ecb821b941a4, type: 3}
-      propertyPath: m_Constraints
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 2024130170501699093, guid: c5b708f725c6deb4a8f5ecb821b941a4, type: 3}
-      propertyPath: m_Interpolate
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2024130170501699093, guid: c5b708f725c6deb4a8f5ecb821b941a4, type: 3}
-      propertyPath: m_IsKinematic
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2024130170501699093, guid: c5b708f725c6deb4a8f5ecb821b941a4, type: 3}
-      propertyPath: m_CollisionDetection
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2761465957456135920, guid: c5b708f725c6deb4a8f5ecb821b941a4, type: 3}
-      propertyPath: current_slotscore
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6735677117192134376, guid: c5b708f725c6deb4a8f5ecb821b941a4, type: 3}
-      propertyPath: MinDistance
-      value: 1.0683794
-      objectReference: {fileID: 0}
     - target: {fileID: 7240513696426546330, guid: c5b708f725c6deb4a8f5ecb821b941a4, type: 3}
       propertyPath: m_Name
-      value: Pinball
-      objectReference: {fileID: 0}
-    - target: {fileID: 7240513696426546330, guid: c5b708f725c6deb4a8f5ecb821b941a4, type: 3}
-      propertyPath: m_TagString
       value: Pinball
       objectReference: {fileID: 0}
     m_RemovedComponents: []

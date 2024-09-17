@@ -8,12 +8,11 @@ public class Slots : MonoBehaviour
 {
     [SerializeField] int score;
     [SerializeField] bool debugLog;
-    static public int newscore = 0;
     public Bumperscore bumpScoreObj;
     private void Update()
     {
         Debug.unityLogger.logEnabled = debugLog;
-        newscore = 0;
+     
 
     }
 
@@ -22,9 +21,8 @@ public class Slots : MonoBehaviour
         Debug.Log("HIT!");
         if (other.gameObject.CompareTag("Pinball"))
         {
-            // Add total score
-            other.gameObject.SetActive(false);         
-            newscore = Bumperscore.currentScore + score;
+            // Add score
+
             score = bumpScoreObj.getScore();
             if (score >= 1)
             {

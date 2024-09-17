@@ -15,10 +15,9 @@ GameObject:
   - component: {fileID: 2024130170501699093}
   - component: {fileID: 6735677117192134376}
   - component: {fileID: 502599185397051071}
-  - component: {fileID: 2761465957456135920}
   m_Layer: 0
   m_Name: Pinball
-  m_TagString: Untagged
+  m_TagString: Pinball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -133,9 +132,9 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 1
+  m_Interpolate: 2
+  m_Constraints: 4
+  m_CollisionDetection: 2
 --- !u!82 &6735677117192134376
 AudioSource:
   m_ObjectHideFlags: 0
@@ -156,7 +155,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 1.0683794
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
@@ -247,17 +246,3 @@ MonoBehaviour:
   scoreObject: {fileID: 0}
   ImpactVolume: 0.5
   Impact: {fileID: 8300000, guid: 37cdce56034c9bb46b04a54f0ab40913, type: 3}
---- !u!114 &2761465957456135920
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7240513696426546330}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36c4be935966c4043a42cd10308db045, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Pinball: {fileID: 0}
-  current_slotscore: 0

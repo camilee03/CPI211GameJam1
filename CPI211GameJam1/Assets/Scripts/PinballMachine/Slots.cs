@@ -24,20 +24,35 @@ public class Slots : MonoBehaviour
             // Add score
 
             score = bumpScoreObj.getScore();
-            if (score >= 1)
+            if (score >= 25)
             {
                 Debug.Log("HIT!");
-                if(SceneManager.GetActiveScene().name.Equals("Lvl1Luna"))
+                if(SceneManager.GetActiveScene().name.Equals("Level 1"))
                 {
-                    Debug.Log("Level 1 to Level 2");
-                    SceneManager.LoadScene("Lvl2Luna");
-                    bumpScoreObj.setScore(0);
+                    if(score >= 25)
+                    {
+                        Debug.Log("Level 1 to Level 2");
+                        SceneManager.LoadScene("Level 2");
+                        bumpScoreObj.setScore(0);
+                    }
+                    else
+                    {
+                        other.gameObject.SetActive(false);
+                    }
+                    
                 }
-                else if(SceneManager.GetActiveScene().name.Equals("Lvl2Luna"))
+                else if(SceneManager.GetActiveScene().name.Equals("Level 2"))
                 {
-                    Debug.Log("Level 2 to Level 3");
-                    SceneManager.LoadScene("Lvl3Luna");
-                    bumpScoreObj.setScore(0);
+                    if(score >= 50)
+                    {
+                        Debug.Log("Level 2 to Level 3");
+                        SceneManager.LoadScene("Level 3");
+                        bumpScoreObj.setScore(0);
+                    }
+                    else
+                    {
+                        other.gameObject.SetActive(false);
+                    }
                 }
                 else
                 {

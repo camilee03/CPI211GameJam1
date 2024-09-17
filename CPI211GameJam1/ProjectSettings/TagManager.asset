@@ -9,6 +9,7 @@ TagManager:
   - losebarrier
   - Bumperslot
   - Pinball
+  - Victory
   layers:
   - Default
   - TransparentFX

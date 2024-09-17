@@ -14,4 +14,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Lvl3Luna.unity
     guid: df72cfa2243cd8b4bac665e723aebb81
+  - enabled: 1
+    path: Assets/Scenes/Level 1.unity
+    guid: 7713f6d13002d1f429c716ae47906d71
+  - enabled: 1
+    path: Assets/Scenes/Level 2.unity
+    guid: ada27984912c9c444848b0248cad8d40
+  - enabled: 1
+    path: Assets/Scenes/Level 3.unity
+    guid: 9585d8f7c8bfca142b1242dc052889b1
   m_configObjects: {}

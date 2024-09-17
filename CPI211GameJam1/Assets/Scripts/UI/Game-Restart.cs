@@ -7,6 +7,7 @@ public class Restart : MonoBehaviour
 {   
     //Try Again Text UI
     GameObject tryAgain;
+    //GameObject Victory;
     //lose barrier cube
     GameObject loseBarrier;
     Slots_V2 total_score;
@@ -15,6 +16,7 @@ public class Restart : MonoBehaviour
     {
         //Shows try again object UI
         tryAgain = GameObject.FindGameObjectWithTag("TryAgain");
+        //Victory = GameObject.FindGameObjectWithTag("Victory");
         loseBarrier = GameObject.FindGameObjectWithTag("losebarrier");
         tryAgain.SetActive(false);
 
@@ -23,18 +25,19 @@ public class Restart : MonoBehaviour
     {
         if (trigger.gameObject.CompareTag("Pinball") ) 
         {
-         if (Slots_V2.newscore < 26){ 
-            print("Bumper Test!!");
-            tryAgain.SetActive(true);
+            if (Slots_V2.newscore < 25){ 
+                print("Bumper Test!!");
+                tryAgain.SetActive(true);
                 //disappear in two frames
-            Invoke("resetGame", 2f);
+                Invoke("resetGame", 2f);
             }
         }
-        //resetGame();
-        else if (Slots_V2.newscore >26)
-        {
-            tryAgain.SetActive(false);
-        }
+            //resetGame();
+            else if (Slots_V2.newscore >= 25)
+            {
+                tryAgain.SetActive(false);
+                //Victory.SetActive(true);
+            }
        }
       
     
@@ -48,7 +51,7 @@ public class Restart : MonoBehaviour
     void Update()
     {
         if (GameObject.FindWithTag("Pinball") != null)  {
-            if (Slots_V2.newscore < 26) // check if the total score is is less than 26, if less than 26 then restart
+            if (Slots_V2.newscore < 25) // check if the total score is is less than 26, if less than 26 then restart
             {
               loseBarrier.SetActive(true);
                 
@@ -56,13 +59,13 @@ public class Restart : MonoBehaviour
         }
         else if (GameObject.FindWithTag("Pinball") != null) 
         {
-            if (Slots_V2.newscore > 26) // placeholder if statement, check if the total score is more than 26, if more than 26 then set TryAgain text to false
+            if (Slots_V2.newscore >= 25) // placeholder if statement, check if the total score is more than 26, if more than 26 then set TryAgain text to false
             {
                 tryAgain.SetActive(false);
             }
         }
             else {
-             if (Slots_V2.newscore < 26) // check if the total score is is less than 26, if less than 26 then restart { 
+             if (Slots_V2.newscore < 25) // check if the total score is is less than 26, if less than 26 then restart { 
                 Invoke("resetGame", 2f);
                 tryAgain.SetActive(true);
             }
